@@ -20,7 +20,7 @@ from data_storage import n
 from data_storage import freq
 from data_storage import df
 
-def process(mic_data):
+def processing(mic_data):
 	
 	mic_fft = np.fft.fft(mic_data) # applied fft to mic_data
 
@@ -54,4 +54,4 @@ def process(mic_data):
 
 mic_data_0, mic_data_1, mic_data_2, mic_data_3 = data()
 
-max_time_array = np.array([process(mic_data_0), process(mic_data_3), process(mic_data_2), process(mic_data_3)])
+max_time_array = np.array([processing(mic_data_0), processing(mic_data_3), processing(mic_data_2), processing(mic_data_3)])
