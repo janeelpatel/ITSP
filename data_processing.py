@@ -3,7 +3,7 @@ Created by : Team Unique Tech for ITSP, IIT Bombay
 
 The below code is for processing the signal coming from the electrical circuit through the RaspberryPi. 
 
-The code modifies the array of data collected from the RaspberryPi to filter out the noise through fft algorithms.The data collected 
+The code modifies the array of data collected from the RaspberryPi to filter out the noise through fft algorithms. The data collected 
 from RPi is stored in an array to which we apply the fft algorithm which takes us to the intensity vs frequency plot and then remove 
 the unwanted frequencies and just keep the band of useful frequencies. 
 
