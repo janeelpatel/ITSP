@@ -9,7 +9,7 @@ The code creates arrays for data collected from the RaspberryPi.
 import numpy as np
 import time
 from math import pi
-from ITSP_Read_ADC_Values import read_val
+from adc_read import read_val
 
 # some fundamental definitions and variables
 
@@ -19,7 +19,7 @@ n = 400000 # number of samples or number of data points (will represent sound in
 # df = 1/T fundamental frequency of the fft
 # dw = 2*pi*df fundamental angular frequency of the fft
 # ny = df*n/2 nyquist frequency (or the top frequency)
-# freq = 2000 frequency of the sound-source 
+freq = 2000 # frequency of the sound-source 
 
 def data():
 	mic_data_0 = np.array([]) # used to store data from mic1 for 'n' sample points
