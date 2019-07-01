@@ -41,4 +41,4 @@ def data():
 		t_axis = np.append(t_axis, t_delay) # update the t_axis array
 		
 	
-	return mic_data_1, mic_data_2, mic_data_3, mic_data_4
+	return mic_data_0, mic_data_1, mic_data_2, mic_data_3
