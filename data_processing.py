@@ -15,7 +15,10 @@ at which the intensity attained its maxima.
 import numpy as np
 import time
 from math import pi
-# from data_storage import data
+from data_storage import data
+from data_storage import n
+from data_storage import freq
+from data_storage import df
 
 def process(mic_data):
 	
@@ -48,4 +51,7 @@ def process(mic_data):
 	max_time = t_axis[mic_ifft_argmax] # time at which mic_ifft_max is attained
 	
 	return max_time
-	
+
+mic_data_0, mic_data_1, mic_data_2, mic_data_3 = data()
+
+max_time_array = np.array([process(mic_data_0), process(mic_data_3), process(mic_data_2), process(mic_data_3)])
