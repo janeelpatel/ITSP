@@ -35,9 +35,10 @@ def data():
 	while(temp>0):
 
 		temp -= 1
-		mic_reading = read_val(port) # input from mic through electrical circuit
+		# take the input from the mics through read_val and store it in the array
 		t_now = time.time()
 		t_delay = t_now - t_start # calculating the delay from the start of loop (/the point after which readings were taken)
 		t_axis = np.append(t_axis, t_delay) # update the t_axis array
-		mic_data = np.append(mic_data, mic_reading) # update the mic_data
 		
+	
+	return mic_data_1, mic_data_2, mic_data_3, mic_data_4
