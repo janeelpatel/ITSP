@@ -2,7 +2,7 @@
 Created by : Team Unique Tech for ITSP, IIT Bombay
 
 The below code is for calculating the angle through which the bot needs to rotate in order to reach to the source. 
-The code extracts the required data and then using the principles similar to YDSE, calculates the rotation angle.
+The code extracts the required data and then using principles similar to YDSE, calculates the rotation angle.
 
 """
 
