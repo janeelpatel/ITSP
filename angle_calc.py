@@ -24,11 +24,12 @@ angle_01 = atan2(dist_01, dist) # in radians
 angle_23 = atan2(dist_23, dist) # in radians
 
 if (mta[0]<mta[1]): # checks which mic is near the source
-	orientation_01 = 'C'
+	orientation = 'C'
 else:
 	orientation_01 = 'AC'
 	
 # the orientation is fixed now
 # the sound waves are assumed to be planar 
 
-angle = (angle_01 + angle_23)/2 # average rotation angle in radians 
+angle_rad = (angle_01 + angle_23)/2 # average rotation angle in radians 
+angle_deg = angle_rad*180/(math.pi) # average rotation angle in degrees 
