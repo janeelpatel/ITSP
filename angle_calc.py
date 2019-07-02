@@ -26,7 +26,7 @@ angle_23 = atan2(dist_23, dist) # in radians
 if (mta[0]<mta[1]): # checks which mic is near the source
 	orientation = 'C'
 else:
-	orientation_01 = 'AC'
+	orientation = 'AC'
 	
 # the orientation is fixed now
 # the sound waves are assumed to be planar 
