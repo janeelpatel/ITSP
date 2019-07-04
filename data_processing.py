@@ -46,7 +46,7 @@ def processing(mic_data):
 	mic_ifft = np.fft.ifft(mic_fft) # this is the required noise-free signal obatined by processing signal from the mic
 
 	mic_ifft_max = mic_ifft.max() # max value in the mic_ifft array
-	mic_ifft_argmax = np.argmax(mic_ifft) # index corresponding to mic_ifft_max
+	mic_ifft_argmax = np.argmax(mic_ifft) # index corresponding to mic_ifft_max_________max se hoga ya nahi, kyuki 0 par kaafi badi valye aati hai and amplitude har ek mai thoda thoda vary karta hai.......shayad kuch threshold amplitude rakhe ki iske aage jaaye to count start kar thik hoga
 
 	max_time = t_axis[mic_ifft_argmax] # time at which mic_ifft_max is attained
 	
