@@ -23,5 +23,5 @@ import Adafruit_MCP3008
 
 # At this point you must have specified the config.
 
-def read_val(port): # port specifies the port to be read from
-	return mcp.read_adc(port) # 10-bit data reading from port
+def read_val(): # port specifies the port to be read from
+	return mcp.read_adc(0), mcp.read_adc(1), mcp.read_adc(2), mcp.read_adc(3) # 10-bit data reading from port
