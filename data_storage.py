@@ -37,7 +37,12 @@ def data():
 
 		temp -= 1
 		# take the input from the mics through read_val and store it in the array
+		mic_temp_0, mic_temp_1, mic_temp_2, mic_temp_3 = read_val()
 		t_now = time.time()
+		mic_data_0 = np.append(mic_data_0, mic_temp_0)
+		mic_data_1 = np.append(mic_data_1, mic_temp_1)
+		mic_data_2 = np.append(mic_data_2, mic_temp_2)
+		mic_data_3 = np.append(mic_data_3, mic_temp_3)
 		t_delay = t_now - t_start # calculating the delay from the start of loop (/the point after which readings were taken)
 		t_axis = np.append(t_axis, t_delay) # update the t_axis array
 		
