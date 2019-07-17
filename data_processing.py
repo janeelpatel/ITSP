@@ -21,7 +21,7 @@ from data_storage import freq
 from data_storage import df
 
 def processing(mic_data):
-	
+	'''
 	mic_fft = np.fft.fft(mic_data) # applied fft to mic_data
 
 	abs_mic_fft = 2/n*np.abs(mic_fft) # magnitude of the complex mic_fft array(scaled) 
@@ -44,14 +44,18 @@ def processing(mic_data):
 	# at this point the fft data contains only the relevant frequencies and the noise has been filtered
 
 	mic_ifft = np.fft.ifft(mic_fft) # this is the required noise-free signal obatined by processing signal from the mic
-
+	
 	mic_ifft_max = mic_ifft.max() # max value in the mic_ifft array
 	mic_ifft_argmax = np.argmax(mic_ifft) # index corresponding to mic_ifft_max_________max se hoga ya nahi, kyuki 0 par kaafi badi valye aati hai and amplitude har ek mai thoda thoda vary karta hai.......shayad kuch threshold amplitude rakhe ki iske aage jaaye to count start kar thik hoga
 
 	max_time = t_axis[mic_ifft_argmax] # time at which mic_ifft_max is attained
-	
+	'''
+	mic_data_max = mic_data.max() # max value in the mic_ifft array
+	mic_data_argmax = np.argmax(mic_data) # index corresponding to mic_ifft_max_________max se hoga ya nahi, kyuki 0 par kaafi badi valye aati hai and amplitude har ek mai thoda thoda vary karta hai.......shayad kuch threshold amplitude rakhe ki iske aage jaaye to count start kar thik hoga
+
+	max_time = t_axis[mic_data_argmax] # time at which mic_ifft_max is attained
 	return max_time
 
-mic_data_0, mic_data_1, mic_data_2, mic_data_3 = data()
+mic_data_0, mic_data_1 = data()
 
-max_time_array = np.array([processing(mic_data_0), processing(mic_data_3), processing(mic_data_2), processing(mic_data_3)])
+max_time_array = np.array([processing(mic_data_0), processing(mic_data_1)])
